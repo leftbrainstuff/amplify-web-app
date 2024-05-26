@@ -43,7 +43,6 @@ export function RoomSelector({
         if (room !== null) {
           onRoomChange(room.id)
         }
-      }}>[+ add]</button>
     }}>[+ add]</button>
   </>
 }
