@@ -31,7 +31,6 @@ export function RoomSelector({
       {rooms.map(room => <option value={room.id} key={room.id}>{room.topic}</option>)}
     </select>
     <button onClick={async () => {
-      <button onClick={async () => {
         const newRoomName = window.prompt("Room name")
         if (!newRoomName) {
           return
@@ -39,7 +38,6 @@ export function RoomSelector({
         const { data: room } = await client.models.Room.create({
           topic: newRoomName
         })
-        
         if (room !== null) {
           onRoomChange(room.id)
         }
